@@ -21,22 +21,22 @@ The output must be the **top 10 most repeated words found**.
 
 ## Solution Overview
 
-**Class:** `WordFinder`  
-**Interface:** `IWordFinder` for extensibility  
-**Extension Methods** for matrix validation (e.g., size, null, uniformity)  
-**LINQ** and **StringComparison.OrdinalIgnoreCase** for clean and efficient search  
-**HashSet** to deduplicate the word stream  
-**Unit Tests** with clear behavior-driven test cases  
+- **Class:** `WordFinder`  
+- **Interface:** `IWordFinder` for extensibility  
+- **Extension Methods** for matrix validation (e.g., size, null, uniformity)  
+- **LINQ** and **StringComparison.OrdinalIgnoreCase** for clean and efficient search  
+- **HashSet** to deduplicate the word stream  
+- **Unit Tests** with clear behavior-driven test cases using `FluentAssertions`
 
 ---
 
 ## Test Coverage
 
- Horizontal and vertical word matches  
- Case-insensitive matching  
- Matrix validation errors  
- Empty and unmatched word streams  
- Top 10 most repeated words  
+ - Horizontal and vertical word matches  
+ - Case-insensitive matching  
+ - Matrix validation errors  
+ - Empty and unmatched word streams  
+ - Top 10 most repeated words  
 
 
 
@@ -53,8 +53,7 @@ dotnet test
 ## Future Improvements
 
 - Add diagonal and reverse search strategies via strategy pattern.
-- Introduce parallel processing for massive word streams.
-- Add caching for repeated queries.
+- Introduce parallel processing for massive word streams with `Parallel.ForEach` .
 
 ---
 
